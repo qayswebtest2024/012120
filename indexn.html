@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بيت زيتون | محمص الزمن الجميل</title>
+
+<!-- Google Fonts (فخمة وناعمة) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #e9ddc8;
+  --primary: #2f5d50;
+  --accent: #9c7a3c;
+  --text: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  min-height: 100vh;
+  font-family: 'Cairo', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* حركة دخول ناعمة */
+.fade-in {
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 18px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 18px;
+  animation: logoFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--primary);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: #5a5a5a;
+  margin-top: 6px;
+}
+
+.content {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  margin-bottom: 18px;
+}
+
+.address {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  border-radius: 18px;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.call {
+  background: var(--primary);
+  color: #fff;
+}
+
+.call:hover {
+  transform: translateY(-3px);
+  background: #244b41;
+}
+
+.location {
+  background: transparent;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+}
+
+.location:hover {
+  background: rgba(47,93,80,0.08);
+  transform: translateY(-3px);
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 26px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page fade-in">
+
+  <div class="header">
+    <!-- الصورة -->
+    <img
+      src="https://i.ibb.co/21T3kfZZ/image.png"
+      alt="بيت زيتون"
+      class="logo"
+    />
+
+    <h1 class="title">بيت زيتون</h1>
+    <div class="subtitle">محمص الزمن الجميل</div>
+  </div>
+
+  <div class="content">
+
+    <!-- الخريطة -->
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=31.9454,35.9284&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0"
+        loading="lazy">
+      </iframe>
+    </div>
+
+    <!-- العنوان -->
+    <div class="address">
+      عمّان – الأردن
+    </div>
+
+    <!-- الأزرار -->
+    <div class="actions">
+      <a href="tel:+962799626120" class="btn call">
+        📞 اتصال
+      </a>
+
+      <a
+        href="https://maps.app.goo.gl/7VZQj6stvpXzXwy3A"
+        target="_blank"
+        class="btn location">
+        📍 الموقع
+      </a>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © بيت زيتون – جميع الحقوق محفوظة
+  </div>
+
+</div>
+
+</body>
+</html>
